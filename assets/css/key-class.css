@@ -1,0 +1,18 @@
+/*
+##########
+Fonte: CSS Raiz
+URL: www.cssraiz.com.br
+E-Mail: cssraiz.code@gmail.com
+GitHub User: cssraiz
+##########
+*/
+[hidden] {
+    display: none!important;
+}
+a[href^="https://"]::before{
+    content: "\f023";
+    font-family: "Font Awesome 5 Free";
+    font-size: .6rem;
+    font-weight: 900;
+    margin-right: .1rem;
+}
