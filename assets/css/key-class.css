@@ -9,10 +9,21 @@ GitHub User: cssraiz
 [hidden] {
     display: none!important;
 }
-a[href^="https://"]::before{
-    content: "\f023";
-    font-family: "Font Awesome 5 Free";
+a[href*=".pdf"]::after,
+a[href*=".doc"]::after,
+a[href*=".docx"]::after,
+a[href*=".xls"]::after{
     font-size: .6rem;
     font-weight: 900;
-    margin-right: .1rem;
+    margin-right: 4px;
+}
+a[href*=".pdf"]::after{
+    content: "(.pdf)";
+}
+a[href*=".doc"]::after,
+a[href*=".docx"]::after{
+    content: "(.doc)";
+}
+a[href*=".xls"]::after{
+    content: "(.xls)";
 }
