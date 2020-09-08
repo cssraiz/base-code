@@ -6,9 +6,20 @@ E-Mail: cssraiz.code@gmail.com
 GitHub User: cssraiz
 ##########
 */
+
+/* 
+    # Esconde qualquer item do HTML
+    Ex.: <div hidden>Examplo</div>
+    Suporte: Todos os navegadores
+*/
 [hidden] {
     display: none!important;
 }
+/* 
+    # Adiciona ao final do link, uma "legenda" revelando o tipo de arquivo
+    Ex.: <a href="arquivo.pdf">Link do arquivo</a> | Link do arquivo(.pdf)
+    Suporte: Todos os navegadores
+*/
 a[href*=".pdf"]::after,
 a[href*=".doc"]::after,
 a[href*=".docx"]::after,
@@ -26,4 +37,15 @@ a[href*=".docx"]::after{
 }
 a[href*=".xls"]::after{
     content: "(.xls)";
+}
+/* 
+    # Limita o texto pela quantidade de linhas, e adiciona reticências(...)
+    Ex.: <p lclamp>Aqui está um texto para exemplo do código abaixo</p> | Aqui está um texto para o exem...
+    Suporte: Todos os navegadores:not(Internet Explorer)
+*/
+[lclamp]{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Reticências será adicionada a partir da terceira linha */
+    overflow: hidden;
 }
